@@ -18,9 +18,9 @@ namespace MathSolver.Controllers
         {
             return View();
         }
-        public IActionResult Calculate(string mathFile)
+        public IActionResult Calculate(string equationFile)
         {
-            FileCalculator.ReadAndCalculate(mathFile);
+            FileCalculator.ReadAndCalculate(equationFile);
             return View();
         }
 
