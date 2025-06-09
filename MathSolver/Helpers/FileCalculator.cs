@@ -13,6 +13,7 @@ namespace MathSolver.Helpers
                 throw new Exception("File does not exist");
             StringBuilder sb = new StringBuilder();
             ParsedLineResponse mathResponse = new ParsedLineResponse();
+            mathResponse.Messages = [];
             using (StreamReader sr = new StreamReader(file))
             {
                 string? line = sr.ReadLine();
@@ -22,17 +23,18 @@ namespace MathSolver.Helpers
                     mathResponse.equation = line;
 
                     int result = mathResponse.ParseAndMath(line);
-                    mathResponse.Message = $"{mathResponse.equation} = {result}";
-                    sb.AppendLine(mathResponse.Message);
+                    mathResponse.Messages.Add($"{mathResponse.equation} = {result}");
                     line = sr.ReadLine();
                 }
-                var test = sb.ToString();
             }
             using (StreamWriter outputFile = new StreamWriter(file))
             {
-                outputFile.WriteLine(mathResponse.Message);
+                for (int i = 0; i < mathResponse.Messages.Count; i++)
+                {
+                    outputFile.WriteLine(mathResponse.Messages[i]);
+                }
             }
-            return mathResponse.Message;
+            return mathResponse.Messages[0];
         }
     }
 }

@@ -12,7 +12,7 @@ namespace MathSolver.Models
         
         public bool isValid { get; set; }
 
-        public string Message { get; set; }
+        public List<string> Messages { get; set; }
 
         public int Result { get; set; }
 
