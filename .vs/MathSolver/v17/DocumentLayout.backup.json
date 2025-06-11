@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\john.olson\\code\\practice\\MathSolver\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{86FBF4D5-82F5-4C5A-AE03-6D7DD4A4BB7A}|MathSolverTests\\MathSolverTests.csproj|c:\\users\\john.olson\\code\\practice\\mathsolver\\mathsolvertests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86FBF4D5-82F5-4C5A-AE03-6D7DD4A4BB7A}|MathSolverTests\\MathSolverTests.csproj|solutionrelative:mathsolvertests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C566FB1F-94CF-4691-8A6A-E9D61E9F49C2}|MathSolver\\MathSolver.csproj|c:\\users\\john.olson\\code\\practice\\mathsolver\\mathsolver\\helpers\\recursivemathsolver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C566FB1F-94CF-4691-8A6A-E9D61E9F49C2}|MathSolver\\MathSolver.csproj|solutionrelative:mathsolver\\helpers\\recursivemathsolver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C566FB1F-94CF-4691-8A6A-E9D61E9F49C2}|MathSolver\\MathSolver.csproj|c:\\users\\john.olson\\code\\practice\\mathsolver\\mathsolver\\models\\parsedlineresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C566FB1F-94CF-4691-8A6A-E9D61E9F49C2}|MathSolver\\MathSolver.csproj|solutionrelative:mathsolver\\models\\parsedlineresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C566FB1F-94CF-4691-8A6A-E9D61E9F49C2}|MathSolver\\MathSolver.csproj|c:\\users\\john.olson\\code\\practice\\mathsolver\\mathsolver\\helpers\\filecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C566FB1F-94CF-4691-8A6A-E9D61E9F49C2}|MathSolver\\MathSolver.csproj|solutionrelative:mathsolver\\helpers\\filecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,20 +23,16 @@
       "RelativeMoniker": "D:0:0:{C566FB1F-94CF-4691-8A6A-E9D61E9F49C2}|MathSolver\\MathSolver.csproj|solutionrelative:mathsolver\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C566FB1F-94CF-4691-8A6A-E9D61E9F49C2}|MathSolver\\MathSolver.csproj|c:\\users\\john.olson\\code\\practice\\mathsolver\\mathsolver\\views\\home\\calculate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C566FB1F-94CF-4691-8A6A-E9D61E9F49C2}|MathSolver\\MathSolver.csproj|solutionrelative:mathsolver\\views\\home\\calculate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C566FB1F-94CF-4691-8A6A-E9D61E9F49C2}|MathSolver\\MathSolver.csproj|c:\\users\\john.olson\\code\\practice\\mathsolver\\mathsolver\\models\\parsedlineresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C566FB1F-94CF-4691-8A6A-E9D61E9F49C2}|MathSolver\\MathSolver.csproj|solutionrelative:mathsolver\\models\\parsedlineresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C566FB1F-94CF-4691-8A6A-E9D61E9F49C2}|MathSolver\\MathSolver.csproj|c:\\users\\john.olson\\code\\practice\\mathsolver\\mathsolver\\models\\mathfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C566FB1F-94CF-4691-8A6A-E9D61E9F49C2}|MathSolver\\MathSolver.csproj|solutionrelative:mathsolver\\models\\mathfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C566FB1F-94CF-4691-8A6A-E9D61E9F49C2}|MathSolver\\MathSolver.csproj|c:\\users\\john.olson\\code\\practice\\mathsolver\\mathsolver\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C566FB1F-94CF-4691-8A6A-E9D61E9F49C2}|MathSolver\\MathSolver.csproj|solutionrelative:mathsolver\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C566FB1F-94CF-4691-8A6A-E9D61E9F49C2}|MathSolver\\MathSolver.csproj|c:\\users\\john.olson\\code\\practice\\mathsolver\\mathsolver\\views\\home\\calculate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C566FB1F-94CF-4691-8A6A-E9D61E9F49C2}|MathSolver\\MathSolver.csproj|solutionrelative:mathsolver\\views\\home\\calculate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,11 +42,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\john.olson\\code\\practice\\MathSolver\\MathSolverTests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "MathSolverTests\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\john.olson\\code\\practice\\MathSolver\\MathSolverTests\\UnitTest1.cs*",
+              "RelativeToolTip": "MathSolverTests\\UnitTest1.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T21:11:32.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RecursiveMathSolver.cs",
+              "DocumentMoniker": "C:\\Users\\john.olson\\code\\practice\\MathSolver\\MathSolver\\Helpers\\RecursiveMathSolver.cs",
+              "RelativeDocumentMoniker": "MathSolver\\Helpers\\RecursiveMathSolver.cs",
+              "ToolTip": "C:\\Users\\john.olson\\code\\practice\\MathSolver\\MathSolver\\Helpers\\RecursiveMathSolver.cs",
+              "RelativeToolTip": "MathSolver\\Helpers\\RecursiveMathSolver.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAIwD0AAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T21:10:32.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "MathFile.cs",
               "DocumentMoniker": "C:\\Users\\john.olson\\code\\practice\\MathSolver\\MathSolver\\Models\\MathFile.cs",
               "RelativeDocumentMoniker": "MathSolver\\Models\\MathFile.cs",
@@ -51,46 +85,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "ParsedLineResponse.cs",
               "DocumentMoniker": "C:\\Users\\john.olson\\code\\practice\\MathSolver\\MathSolver\\Models\\ParsedLineResponse.cs",
               "RelativeDocumentMoniker": "MathSolver\\Models\\ParsedLineResponse.cs",
               "ToolTip": "C:\\Users\\john.olson\\code\\practice\\MathSolver\\MathSolver\\Models\\ParsedLineResponse.cs",
               "RelativeToolTip": "MathSolver\\Models\\ParsedLineResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAIwBYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T21:33:34.874Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "FileCalculator.cs",
               "DocumentMoniker": "C:\\Users\\john.olson\\code\\practice\\MathSolver\\MathSolver\\Helpers\\FileCalculator.cs",
               "RelativeDocumentMoniker": "MathSolver\\Helpers\\FileCalculator.cs",
-              "ToolTip": "C:\\Users\\john.olson\\code\\practice\\MathSolver\\MathSolver\\Helpers\\FileCalculator.cs*",
-              "RelativeToolTip": "MathSolver\\Helpers\\FileCalculator.cs*",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAABUAAAARAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\john.olson\\code\\practice\\MathSolver\\MathSolver\\Helpers\\FileCalculator.cs",
+              "RelativeToolTip": "MathSolver\\Helpers\\FileCalculator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T21:11:00.197Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\john.olson\\code\\practice\\MathSolver\\MathSolver\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "MathSolver\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\john.olson\\code\\practice\\MathSolver\\MathSolver\\Controllers\\HomeController.cs",
               "RelativeToolTip": "MathSolver\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAywBgAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwBYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T21:08:26.345Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Calculate.cshtml",
               "DocumentMoniker": "C:\\Users\\john.olson\\code\\practice\\MathSolver\\MathSolver\\Views\\Home\\Calculate.cshtml",
               "RelativeDocumentMoniker": "MathSolver\\Views\\Home\\Calculate.cshtml",
@@ -103,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\john.olson\\code\\practice\\MathSolver\\MathSolver\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "MathSolver\\Views\\Home\\Index.cshtml",
@@ -111,7 +145,8 @@
               "RelativeToolTip": "MathSolver\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-06T21:04:50.313Z"
+              "WhenOpened": "2025-06-06T21:04:50.313Z",
+              "EditorCaption": ""
             }
           ]
         },
