@@ -8,6 +8,7 @@ namespace MathSolver.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        ParsedLineResponse parsedLineResponse = new ParsedLineResponse();
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -20,7 +21,8 @@ namespace MathSolver.Controllers
         }
         public IActionResult Calculate(string equationFile)
         {
-            FileCalculator.ReadAndCalculate(equationFile);
+            parsedLineResponse.ReadAndCalculate(equationFile);
+            //solve file
             return View();
         }
 
