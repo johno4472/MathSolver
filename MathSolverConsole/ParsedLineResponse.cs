@@ -1,15 +1,12 @@
-﻿using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using System.Data;
+﻿using System.Text;
 using System.Text.RegularExpressions;
-using Microsoft.Extensions.FileSystemGlobbing.Internal.Patterns;
 
 namespace MathSolver.Models
 {
     public class ParsedLineResponse
     {
-        public string Equation {  get; set; }
-        
+        public string Equation { get; set; }
+
         public bool IsValid { get; set; }
 
         public List<string> Messages { get; set; }
@@ -25,14 +22,15 @@ namespace MathSolver.Models
                 if (line[i] == '(')
                 {
                     parenCounter++;
-                } else if (line[i] == ')')
+                }
+                else if (line[i] == ')')
                 {
                     parenCounter -= 1;
                 }
                 if (parenCounter < 0)
                 {
                     return false;
-                }                    
+                }
             }
             if (parenCounter == 0)
             {
@@ -163,3 +161,4 @@ namespace MathSolver.Models
         }
     }
 }
+
