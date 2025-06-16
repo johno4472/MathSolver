@@ -8,17 +8,20 @@ string equationFilePath = Console.ReadLine() ?? "";
 if (!String.IsNullOrEmpty(equationFilePath))
 {
     //create a new equationfileresponse instance
-    EquationFileParser equationFileParser = new EquationFileParser();
-    ParsedLineResponse parsedLineResponse = new ParsedLineResponse();
+    EquationFileParser equationFileParser = new();
+
     //read file and make list of equation strings
     equationFileParser.ReadFile(equationFilePath);
+
     //for each equation string
-    for (int i = 0; i < equationFileParser.ParsedLineResponses.Count; i++)
+    for (int i = 0; i < equationFileParser.EquationInfoList.Count; i++)
     {
         //strip of spaces
-        equationFileParser.ParsedLineResponses[i].RemoveWhiteSpace()
+        equationFileParser.EquationInfoList[i].RemoveWhiteSpace()
+
             //verify if valid equation
             .ValidateEquation()
+            
             //solve equation
             .SolveEquationRecursively();
     }

@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace MathSolver.Models
 {
-    public class ParsedLineResponse
+    public class EquationSolverInfo
     {
         public string Equation { get; set; } = "";
 
@@ -14,16 +14,16 @@ namespace MathSolver.Models
         public bool IsValidEquation { get; set; }
 
         //at this point the equation is stripped of all whitespace
-        public bool ValidParen(string line)
+        public bool ValidParen()
         {
             int parenCounter = 0;
-            for (int i = 0; i < line.Length; i++)
+            for (int i = 0; i < Equation.Length; i++)
             {
-                if (line[i] == '(')
+                if (Equation[i] == '(')
                 {
                     parenCounter++;
                 }
-                else if (line[i] == ')')
+                else if (Equation[i] == ')')
                 {
                     parenCounter -= 1;
                 }
@@ -42,18 +42,18 @@ namespace MathSolver.Models
             }
         }
 
-        public ParsedLineResponse RemoveWhiteSpace()
+        public EquationSolverInfo RemoveWhiteSpace()
         {
             //remove the spaces
             Equation = Regex.Replace(Equation, @"\s+", "");
             return this;
         }
 
-        public ParsedLineResponse ValidateEquation()
+        public EquationSolverInfo ValidateEquation()
         {
             //make sure every character is a number or operator
             //needs to be numberoperatornumber
-            if (ValidParen(Equation))
+            if (ValidParen())
             {
                 string checkWoParen = Equation.Replace("(", "").Replace(")", "");
                 string pattern = @"^((\d+[+\-*/])+\d+)+$";
@@ -68,7 +68,7 @@ namespace MathSolver.Models
             return this;
         }
 
-        public int FindCloseParen(string equation)
+        public static int FindCloseParen(string equation)
         {
             int parenCounter = 0;
             for (int i = 0; i < equation.Length; i++)
@@ -89,8 +89,8 @@ namespace MathSolver.Models
             if (equation[0] == '(')
             {
                 int closeParenIndex = FindCloseParen(equation);
-                string leftEquation = SolveMultiplyDivide(equation.Substring(1, FindCloseParen(equation) - 1)).ToString();
-                string rightEquation = equation.Substring(closeParenIndex + 1);
+                string leftEquation = SolveMultiplyDivide(equation[1..FindCloseParen(equation)]).ToString();
+                string rightEquation = equation[(closeParenIndex + 1)..];
                 return leftEquation + rightEquation;
             }
             return equation;
@@ -102,15 +102,15 @@ namespace MathSolver.Models
             {
                 if (equation[i] == '/')
                 {
-                    return SolveAddSubtract(equation.Substring(0, i)) / SolveMultiplyDivide(SolveIfInParen(equation.Substring(i + 1)));
+                    return SolveAddSubtract(equation[..i]) / SolveMultiplyDivide(SolveIfInParen(equation[(i + 1)..]));
                 }
                 else if (equation[i] == '*')
                 {
-                    return SolveAddSubtract(equation.Substring(0, i)) * SolveMultiplyDivide(SolveIfInParen(equation.Substring(i + 1)));
+                    return SolveAddSubtract(equation[..i]) * SolveMultiplyDivide(SolveIfInParen(equation[(i + 1)..]));
                 }
                 else if (equation[i] == '(')
                 {
-                    equation = equation.Substring(0, i) + SolveIfInParen(equation.Substring(i)).ToString();
+                    equation = equation[..i] + SolveIfInParen(equation[i..]).ToString();
                     i--;
                 }
             }
@@ -123,18 +123,18 @@ namespace MathSolver.Models
             {
                 if (equation[i] == '+')
                 {
-                    return Convert.ToInt32(equation.Substring(0, i)) + SolveAddSubtract(SolveIfInParen(equation.Substring(i + 1)));
+                    return Convert.ToInt32(equation[..i]) + SolveAddSubtract(SolveIfInParen(equation[(i + 1)..]));
                 }
                 else if (equation[i] == '-')
                 {
-                    return Convert.ToInt32(equation.Substring(0, i)) - SolveAddSubtract(SolveIfInParen(equation.Substring(i + 1)));
+                    return Convert.ToInt32(equation[..i]) - SolveAddSubtract(SolveIfInParen(equation[(i + 1)..]));
                 }
             }
             return Convert.ToInt32(equation);
         }
 
         
-        public ParsedLineResponse SolveEquationRecursively()
+        public EquationSolverInfo SolveEquationRecursively()
         {
             if (IsValidEquation)
             {
@@ -142,24 +142,6 @@ namespace MathSolver.Models
             }
             Message = $"{Equation} = {Result}";
             return this;
-        }
-
-        public List<string> ReadFile(string file)
-        {
-            Console.WriteLine(file);
-            if (!File.Exists(file))
-                throw new Exception("File does not exist");
-            List<string> equationList = [];
-            using (StreamReader sr = new StreamReader(file))
-            {
-                string? line = sr.ReadLine();
-
-                while (line != null)
-                {
-                    equationList.Add(line);
-                }
-            }
-            return equationList;
         }
     }
 }

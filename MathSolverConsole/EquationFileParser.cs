@@ -9,37 +9,37 @@ namespace MathSolverConsole
 {
     public class EquationFileParser
     {
-        public List<ParsedLineResponse> ParsedLineResponses { get; set; } = [];
+        public List<EquationSolverInfo> EquationInfoList { get; set; } = [];
 
         public void ReadFile(string file)
         {
             Console.WriteLine(file);
             if (!File.Exists(file))
                 throw new Exception("File does not exist");
-            List<string> equationList = [];
-            using (StreamReader sr = new StreamReader(file))
-            {
-                string? line = sr.ReadLine();
 
-                while (line != null)
+            using StreamReader sr = new(file);
+            string? line = sr.ReadLine();
+
+            while (line != null)
+            {
+                EquationSolverInfo response = new()
                 {
-                    ParsedLineResponse response = new ParsedLineResponse();
-                    response.Equation = line;
-                    ParsedLineResponses.Add(response);
-                    line = sr.ReadLine();
-                }
+                    Equation = line
+                };
+                EquationInfoList.Add(response);
+                line = sr.ReadLine();
             }
             return;
         }
 
         public void WriteResponseToFile(string file)
         {
-            using (StreamWriter outputFile = new StreamWriter(file))
+            using StreamWriter outputFile = new(file);
+            for (int i = 0; i < EquationInfoList
+                .Count; i++)
             {
-                for (int i = 0; i < ParsedLineResponses.Count; i++)
-                {
-                    outputFile.WriteLine(ParsedLineResponses[i].Message);
-                }
+                outputFile.WriteLine(EquationInfoList
+                    [i].Message);
             }
         }
     }
