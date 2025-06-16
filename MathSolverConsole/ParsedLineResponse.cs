@@ -5,13 +5,13 @@ namespace MathSolver.Models
 {
     public class ParsedLineResponse
     {
-        public string Equation { get; set; }
+        public string Equation { get; set; } = "";
 
-        public bool IsValid { get; set; }
+        public string Message { get; set; } = "";
 
-        public List<string> Messages { get; set; }
+        public string Result { get; set; } = "";
 
-        public int Result { get; set; }
+        public bool IsValidEquation { get; set; }
 
         //at this point the equation is stripped of all whitespace
         public bool ValidParen(string line)
@@ -42,22 +42,30 @@ namespace MathSolver.Models
             }
         }
 
-        public string ParseAndMath(string line)
+        public ParsedLineResponse RemoveWhiteSpace()
         {
             //remove the spaces
-            string noSpaceLine = Regex.Replace(line, @"\s+", "");
+            Equation = Regex.Replace(Equation, @"\s+", "");
+            return this;
+        }
+
+        public ParsedLineResponse ValidateEquation()
+        {
             //make sure every character is a number or operator
             //needs to be numberoperatornumber
-            if (ValidParen(noSpaceLine))
+            if (ValidParen(Equation))
             {
-                string checkWoParen = noSpaceLine.Replace("(", "").Replace(")", "");
+                string checkWoParen = Equation.Replace("(", "").Replace(")", "");
                 string pattern = @"^((\d+[+\-*/])+\d+)+$";
                 if (Regex.Match(checkWoParen, pattern).Success)
                 {
-                    return SolveEquationRecursively(noSpaceLine).ToString();
+                    IsValidEquation = true;
+                    return this;
                 }
             }
-            return "Not a valid equation";
+            Result = "Not a valid equation";
+            IsValidEquation = false;
+            return this;
         }
 
         public int FindCloseParen(string equation)
@@ -125,39 +133,33 @@ namespace MathSolver.Models
             return Convert.ToInt32(equation);
         }
 
-        public int SolveEquationRecursively(string equation)
+        
+        public ParsedLineResponse SolveEquationRecursively()
         {
-            return SolveMultiplyDivide(equation);
+            if (IsValidEquation)
+            {
+                Result = SolveMultiplyDivide(Equation).ToString();
+            }
+            Message = $"{Equation} = {Result}";
+            return this;
         }
 
-        public string ReadAndCalculate(string file)
+        public List<string> ReadFile(string file)
         {
             Console.WriteLine(file);
             if (!File.Exists(file))
                 throw new Exception("File does not exist");
-            StringBuilder sb = new StringBuilder();
-            Messages = [];
+            List<string> equationList = [];
             using (StreamReader sr = new StreamReader(file))
             {
                 string? line = sr.ReadLine();
 
                 while (line != null)
                 {
-                    Equation = line;
-
-                    string result = ParseAndMath(line);
-                    Messages.Add($"{Equation} = {result}");
-                    line = sr.ReadLine();
+                    equationList.Add(line);
                 }
             }
-            using (StreamWriter outputFile = new StreamWriter(file))
-            {
-                for (int i = 0; i < Messages.Count; i++)
-                {
-                    outputFile.WriteLine(Messages[i]);
-                }
-            }
-            return Messages[0];
+            return equationList;
         }
     }
 }
